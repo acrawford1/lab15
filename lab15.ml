@@ -155,7 +155,8 @@ element in a stream, and use it to find out the 2000th prime.
 ....................................................................*)
 
 let rec nth (s : 'a stream) (n : int) : 'a =
-  if n = 0 then head selse nth (tail s) (n - 1) ;;
+  if n = 0 then head s 
+  else nth (tail s) (n - 1) ;;
 
 nth primes 2000;;
 
