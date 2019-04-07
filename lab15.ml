@@ -146,8 +146,7 @@ let not_div_by (n : int) (m : int) : bool =
 let rec sieve s =
   lazy (Cons(head s, sieve (sfilter (not_div_by (head s)) (tail s)))) ;;
 
-let primes = 
-  sieve (tail (tail nats)) ;;
+let primes = sieve (tail (tail nats)) ;;
 
 (*....................................................................
 Exercise 4. How much further can you get computing primes now that the
